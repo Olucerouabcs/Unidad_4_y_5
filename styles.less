@@ -1,0 +1,71 @@
+
+@mainColor:rgb(126, 25, 107);
+@textColor:green;
+@colores: rgb(110, 110, 223), rgb(16, 227, 16), rgb(249, 6, 249), yellow, red ; 
+
+.pruebaMixins(@bg: rgb(17, 216, 17)){
+    color: @bg;
+}
+.colorear-lista(@listas; @i:1) when (@i <= @listas) {
+    @color: extract(@colores,@i);
+
+    .item-@{i}{
+        background-color: @color;
+        border-style: dotted;
+        border-width: 1px;
+        
+    }
+
+    .colorear-lista(@listas, (@i + 1) );
+
+}
+
+body{
+    background-color: white;
+    
+    .container{
+        width: 70%;
+        margin: auto;
+
+        form{
+            background-color: @mainColor;
+            border-radius: 5PX;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 20PX;
+
+            legend{
+                color: @textColor;
+                .pruebaMixins();
+            }
+            fieldset{
+                ul{
+                    .colorear-lista(5);   
+                }
+            }
+                
+            button {
+                background-color:  darken(@mainColor, 12%); 
+                color: white;
+                padding: 10px 20px; 
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease; 
+
+                &:hover {
+                background-color: darken(@mainColor, 5%);
+                }
+            
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            }
+            button:focus {
+                outline: none;
+            }
+            button + * {
+                margin-top: 10px;
+            }
+  
+
+        }
+    }
+}

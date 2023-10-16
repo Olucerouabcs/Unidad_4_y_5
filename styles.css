@@ -1,0 +1,61 @@
+body {
+  background-color: white;
+}
+body .container {
+  width: 70%;
+  margin: auto;
+}
+body .container form {
+  background-color: #7e196b;
+  border-radius: 5PX;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 20PX;
+}
+body .container form legend {
+  color: green;
+  color: #11d811;
+}
+body .container form fieldset ul .item-1 {
+  background-color: #6e6edf;
+  border-style: dotted;
+  border-width: 1px;
+}
+body .container form fieldset ul .item-2 {
+  background-color: #10e310;
+  border-style: dotted;
+  border-width: 1px;
+}
+body .container form fieldset ul .item-3 {
+  background-color: #f906f9;
+  border-style: dotted;
+  border-width: 1px;
+}
+body .container form fieldset ul .item-4 {
+  background-color: yellow;
+  border-style: dotted;
+  border-width: 1px;
+}
+body .container form fieldset ul .item-5 {
+  background-color: red;
+  border-style: dotted;
+  border-width: 1px;
+}
+body .container form button {
+  background-color: #4b0f40;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+body .container form button:hover {
+  background-color: #691559;
+}
+body .container form button:focus {
+  outline: none;
+}
+body .container form button + * {
+  margin-top: 10px;
+}

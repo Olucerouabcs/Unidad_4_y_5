@@ -6,7 +6,7 @@
     <title>Saludo</title>
 </head>
 <body>
-    <h1>Hola {{$name}}</h1>
+    <h1>Hola <?=$name?></h1>
     <h2>Buen dia</h2>
 </body>
 </html>

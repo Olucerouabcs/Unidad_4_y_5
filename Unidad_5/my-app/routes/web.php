@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -42,5 +43,7 @@ Route::get('/operaciones/{operacion}/{num1}/{num2}', function ($operacion,$num1,
     }
     
 })->where(['operacion' => '(suma|resta|multi|div)','num1' => '[0-9]+','num2' => '[0-9]+']);
+*/
+Route::get('/user/{name}', [UserController::class, 'index'])->where(['name' => '[A-Za-z]+']);
 
 

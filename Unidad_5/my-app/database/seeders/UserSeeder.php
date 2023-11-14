@@ -18,6 +18,7 @@ class UserSeeder extends Seeder
         $user -> name = "pedro";
         $user -> email = "zxcvvb@gmail.com";
         $user -> password = "1233";
+        
         $user -> save();
         
         \App\Models\User::factory(10)->create();
